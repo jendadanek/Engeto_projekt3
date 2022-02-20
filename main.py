@@ -11,6 +11,12 @@ def hlavni() -> None:
     konecne_udaje = (hledej_tabulku(naparsovano) for row in tabulka)
     uloz_csv(list(konecne_udaje))
 
+    adresy_kratke = []
+    ziskej_adresy(naparsovano, adresy_kratke)
+    seznam_adres = []
+    získej_odkazy(adresy_kratke, seznam_adres)
+    print(seznam_adres)
+
 def ziskej_odpoved():
     return requests.get(URL)
 
@@ -44,6 +50,15 @@ def uloz_csv(data: List[dict]):
 
                 }
             )
+def ziskej_adresy(naparsovano, adresy_kratke):
+    for adresa in naparsovano.find_all("a")[5:-2]:
+        adresy_kratke.append(adresa.get("href"))
+
+
+def získej_odkazy(adresy_kratke,seznam_adres):
+    for adresa in adresy_kratke:
+        seznam_adres.append("https://volby.cz/pls/ps2017nss/" + adresa)
+
 
 hlavni()
 
