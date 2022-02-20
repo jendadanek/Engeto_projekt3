@@ -10,7 +10,7 @@ def hlavni() -> None:
     tabulka = hledej_tabulku(naparsovano)
     radky = hledej_radky(tabulka)
 
-
+    konecne_udaje = (tabulka_info(row) for row in radky)
     uloz_csv(list(konecne_udaje))
 
 def ziskej_odpoved():
