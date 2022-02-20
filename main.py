@@ -21,7 +21,7 @@ def vytahni_udaje(odpoved):
     return BS(odpoved.text, "html.parser")
 
 def hledej_tabulku(naparsovano):
-    return naparsovano.find("table", {"class": "table"})
+    return naparsovano.find_all("table")
 
 def hledej_radky(tabulka) -> list:
     return tabulka.find_all("tr")[2:]
