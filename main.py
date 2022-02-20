@@ -8,9 +8,7 @@ def hlavni() -> None:
     odpoved = ziskej_odpoved()
     naparsovano = vytahni_udaje(odpoved)
     tabulka = hledej_tabulku(naparsovano)
-    radky = hledej_radky(tabulka)
-
-    konecne_udaje = (tabulka_info(row) for row in radky)
+    konecne_udaje = (hledej_tabulku(naparsovano) for row in tabulka)
     uloz_csv(list(konecne_udaje))
 
 def ziskej_odpoved():
@@ -21,19 +19,16 @@ def vytahni_udaje(odpoved):
     return BS(odpoved.text, "html.parser")
 
 def hledej_tabulku(naparsovano):
-    return naparsovano.find_all("table")
+    for table in naparsovano.find_all("table"):
+        for tr in table.find_all("tr"):
+            try:
+                kod = tr.find_all("td")[0].text
+                mesto = tr.find_all("td")[1].text
+                return {"kod": kod, "mesto": mesto}
 
-def hledej_radky(tabulka) -> list:
-    return tabulka.find_all("tr")[2:]
+            except AttributeError:
+                print("Indexy u jednotlivych bunek v radku nejsou v poradku")
 
-def tabulka_info(tr) -> dict:
-    try:
-        kod = tr.find_all("td")[0].text
-        mesto = tr.find_all("td")[1].text
-        return {"kod": kod, "mesto": mesto}
-
-    except AttributeError:
-        print("Indexy u jednotlivych bunek v radku nejsou v poradku")
 
 def uloz_csv(data: List[dict]):
     with open("mesta.csv", "a", newline="") as csv_soubor:
