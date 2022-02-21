@@ -4,8 +4,8 @@ import csv
 from typing import List
 
 URL = "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204"
-def hlavni() -> None:
-    odpoved = ziskej_odpoved()
+def hlavni(URL,nazev_souboru) -> None:
+    odpoved = ziskej_odpoved(URL)
     naparsovano = vytahni_udaje(odpoved)
     tabulka = hledej_tabulku(naparsovano)
     konecne_udaje = (hledej_tabulku(naparsovano) for row in tabulka)
@@ -17,7 +17,7 @@ def hlavni() -> None:
     získej_odkazy(adresy_kratke, seznam_adres)
     print(seznam_adres)
 
-def ziskej_odpoved():
+def ziskej_odpoved(URL):
     return requests.get(URL)
 
 
@@ -36,8 +36,8 @@ def hledej_tabulku(naparsovano):
                 print("Indexy u jednotlivych bunek v radku nejsou v poradku")
 
 
-def uloz_csv(data: List[dict]):
-    with open("mesta.csv", "a", newline="") as csv_soubor:
+def uloz_csv(data: List[dict],nazev_souboru):
+    with open("nazev_souboru.csv", "a", newline="") as csv_soubor:
         zahlavi = ["KOD", "MESTO"]
         writer = csv.DictWriter(csv_soubor, fieldnames=zahlavi)
         writer.writeheader()
@@ -60,7 +60,7 @@ def získej_odkazy(adresy_kratke,seznam_adres):
         seznam_adres.append("https://volby.cz/pls/ps2017nss/" + adresa)
 
 
-hlavni()
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","okres_Zlín")
 
 
 
