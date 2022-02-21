@@ -60,7 +60,7 @@ def získej_odkazy(adresy_kratke,seznam_adres):
         seznam_adres.append("https://volby.cz/pls/ps2017nss/" + adresa)
 
 
-hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","okres_Zlín")
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Okres_Zlín")
 
 
 
