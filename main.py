@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup as BS
 import csv
 from typing import List
 
-URL = "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204"
+
 def hlavni(URL,nazev_souboru) -> None:
     odpoved = ziskej_odpoved(URL)
     naparsovano = vytahni_udaje(odpoved)
     tabulka = hledej_tabulku(naparsovano)
     konecne_udaje = (hledej_tabulku(naparsovano) for row in tabulka)
-    uloz_csv(list(konecne_udaje))
+    uloz_csv(list(konecne_udaje),nazev_souboru)
 
     adresy_kratke = []
     ziskej_adresy(naparsovano, adresy_kratke)
@@ -37,7 +37,7 @@ def hledej_tabulku(naparsovano):
 
 
 def uloz_csv(data: List[dict],nazev_souboru):
-    with open("nazev_souboru.csv", "a", newline="") as csv_soubor:
+    with open(nazev_souboru + ".csv", "a", newline="") as csv_soubor:
         zahlavi = ["KOD", "MESTO"]
         writer = csv.DictWriter(csv_soubor, fieldnames=zahlavi)
         writer.writeheader()
