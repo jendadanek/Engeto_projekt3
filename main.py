@@ -25,8 +25,8 @@ def vytahni_udaje(odpoved):
     return BS(odpoved.text, "html.parser")
 
 def hledej_tabulku(naparsovano):
-    for table in naparsovano.find_all("table"):
-        for tr in table.find_all("tr"):
+    for table in naparsovano.find("table", {"class": "table"}):
+        for tr in table.find_all("tr")[2:]:
             try:
                 kod = tr.find_all("td")[0].text
                 mesto = tr.find_all("td")[1].text
