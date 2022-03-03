@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as BS
 import csv
-from typing import List
-
 
 def hlavni(URL,nazev_souboru):
     odpoved = requests.get(URL)
@@ -11,11 +9,13 @@ def hlavni(URL,nazev_souboru):
     tabulka = []
     kody = []
     mesta = []
+    ziskej_kody_a_mesta(bunky,tabulka, kody, mesta)
+
 
     adresy_kratke = []
     seznam_adres = []
 
-    list_slovniku = []
+
 
 
     voliči_v_seznamu = []
@@ -46,9 +46,25 @@ def hlavni(URL,nazev_souboru):
     DSSS = []
     SPD = []
     SPO = []
+    ziskej_udaje_z_obci(naparsovano, adresy_kratke, seznam_adres, voliči_v_seznamu, vydane_obalky, platne_hlasy,
+                        Občanská_demokratická_strana, Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI, ČSSD, Radostné_Česko,
+                        STAN, KSČM, Strana_zelených,
+                        ROZUMNÍ, Strana_svobodných_občanů, Blok_proti_islamu, ODA, Piráti, Referendum_o_EU, TOP09, ANO,
+                        Dobrá_volba, Republikáni, KDU_ČSL, Realisté, SPORTOVCI, DSSS, SPD, SPO)
+
+
+    list_slovniku = []
+    vytvoř_list_slovniků(kody, mesta, voliči_v_seznamu, vydane_obalky, platne_hlasy, Občanská_demokratická_strana,
+                         Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,
+                         ČSSD, Radostné_Česko, STAN, KSČM, Strana_zelených, ROZUMNÍ, Strana_svobodných_občanů,
+                         Blok_proti_islamu, ODA, Piráti, Referendum_o_EU, TOP09, ANO, Dobrá_volba, Republikáni, KDU_ČSL,
+                         Realisté, SPORTOVCI, DSSS, SPD, SPO, list_slovniku)
+
+    zapis_do_SCV(nazev_souboru,list_slovniku)
 
 
 
+def ziskej_kody_a_mesta(bunky,tabulka, kody, mesta):
     for prvek in bunky:
         tabulka.append(prvek.text)
 
@@ -63,7 +79,10 @@ def hlavni(URL,nazev_souboru):
             mesta.append(prvek)
 
 
-
+def ziskej_udaje_z_obci(naparsovano, adresy_kratke, seznam_adres, voliči_v_seznamu, vydane_obalky, platne_hlasy,
+                        Občanská_demokratická_strana,Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD,Radostné_Česko,STAN,KSČM,Strana_zelených,
+                        ROZUMNÍ,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,Referendum_o_EU,TOP09,ANO,
+                        Dobrá_volba,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO):
     for adresa in naparsovano.find_all("a")[5:-2]:
         adresy_kratke.append(adresa.get("href"))
 
@@ -106,13 +125,14 @@ def hlavni(URL,nazev_souboru):
         SPORTOVCI.append(tabulka2[111])
         DSSS.append(tabulka2[116])
         SPD.append(tabulka2[121])
-        SPO .append(tabulka2[126])
+        SPO.append(tabulka2[126])
 
 
 
-
-
-
+def vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,Řád_národa,CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,
+                         ČSSD,Radostné_Česko,STAN,KSČM,Strana_zelených,ROZUMNÍ,Strana_svobodných_občanů,
+                         Blok_proti_islamu,ODA,Piráti,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Republikáni,KDU_ČSL,
+                         Realisté,SPORTOVCI,DSSS,SPD,SPO,list_slovniku):
     for číslo in range(len(kody)):
         slovník = {"kod" : kody[číslo], "mesto" : mesta[číslo], "volici v seznamu" : voliči_v_seznamu[číslo],
                    "vydane obalky" : vydane_obalky[číslo], "platne hlasy" : platne_hlasy[číslo], 'Občanská demokratická strana': Občanská_demokratická_strana[číslo],
@@ -128,9 +148,7 @@ def hlavni(URL,nazev_souboru):
 
 
 
-
-
-
+def zapis_do_SCV(nazev_souboru,list_slovniku):
     with open(f"{nazev_souboru}.csv", "a", newline="") as csv_soubor:
         zahlavi = ["KOD", "MESTO", "VOLICI V SEZNAMU", "VYDANE OBALKY","PLATNE HLASY", 'Občanská demokratická strana v %', 'Řád národa - Vlastenecká unie v %',
                    'CESTA ODPOVĚDNÉ SPOLEČNOSTI v %', "Česká str.sociálně demokratická v %", 'Radostné Česko v %', 'STAROSTOVÉ A NEZÁVISLÍ v %',
