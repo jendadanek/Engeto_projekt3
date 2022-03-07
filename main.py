@@ -225,7 +225,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[127])
             Narod_sobě.append("nekandiduje")
 
-
         elif URL in Moravskoslezký:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -259,8 +258,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[137])
             Narod_sobě.append("nekandiduje")
 
-
-
         elif URL in Olomoucký:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -293,8 +290,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPD.append(tabulka2[127])
             SPO.append(tabulka2[132])
             Narod_sobě.append("nekandiduje")
-
-
 
         elif URL in Jihomoravský:
             Občanská_demokratická_strana.append(tabulka2[12])
@@ -363,8 +358,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[127])
             Narod_sobě.append("nekandiduje")
 
-
-
         elif URL in Pardubický or URL in Kralovehradecký:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -397,8 +390,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPD.append(tabulka2[122])
             SPO.append(tabulka2[127])
             Narod_sobě.append("nekandiduje")
-
-
 
         elif URL in Liberecký or URL in Ústecký:
             Občanská_demokratická_strana.append(tabulka2[12])
@@ -433,8 +424,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[127])
             Narod_sobě.append("nekandiduje")
 
-
-
         elif URL in Karlovarský:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -467,8 +456,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPD.append(tabulka2[107])
             SPO.append(tabulka2[112])
             Narod_sobě.append("nekandiduje")
-
-
 
         elif URL in Plzenský:
             Občanská_demokratická_strana.append(tabulka2[12])
@@ -503,7 +490,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[127])
             Narod_sobě.append("nekandiduje")
 
-
         elif URL in Jihočeský:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -537,8 +523,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPO.append(tabulka2[132])
             Narod_sobě.append("nekandiduje")
 
-
-
         elif URL in Středočeský:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
@@ -571,7 +555,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPD.append(tabulka2[132])
             SPO.append(tabulka2[137])
             Narod_sobě.append("nekandiduje")
-
 
         elif URL in Praha:
             Občanská_demokratická_strana.append(tabulka2[12])
