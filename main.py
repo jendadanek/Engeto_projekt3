@@ -7,7 +7,6 @@ def hlavni(URL,nazev_souboru):
     for číslo in range(1, 5):
         Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(číslo))
 
-
     Moravskoslezký = []
     for číslo in range(1, 7):
         Moravskoslezký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=810" + str(číslo))
@@ -27,7 +26,6 @@ def hlavni(URL,nazev_souboru):
     Pardubický = []
     for číslo in range(1, 5):
         Pardubický.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=9&xnumnuts=530" + str(číslo))
-
 
     Kralovehradecký = []
     for číslo in range(1, 6):
@@ -57,8 +55,6 @@ def hlavni(URL,nazev_souboru):
     for číslo in range(1, 13):
         Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(číslo))
 
-
-
     Praha = ["https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100"]
 
     kraje = [Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,Plzenský,Jihočeský,Středočeský,Praha]
@@ -66,7 +62,6 @@ def hlavni(URL,nazev_souboru):
     for kraj in kraje:
         for l in kraj:
             Možné_adresy.append(l)
-
 
     if URL not in Možné_adresy:
         print("Neplatná adresa. Ukončuji program")
@@ -119,16 +114,11 @@ def hlavni(URL,nazev_souboru):
     SPO = []
     Narod_sobě = []
 
-
-
     ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,
                         Plzenský,Jihočeský,Středočeský,Praha, naparsovano, adresy_kratke, seznam_adres, voliči_v_seznamu,vydane_obalky,
                         platne_hlasy,Občanská_demokratická_strana,Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD, Cibulka,Radostné_Česko,
                         STAN,KSČM,Strana_zelených,ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě)
-
-
-
 
     list_slovniku = []
     vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
@@ -165,8 +155,7 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
     for adresa in naparsovano.find_all("a")[5:-2]:
             adresy_kratke.append(adresa.get("href"))
 
-
-    if URL == "https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=14&xnumnuts=8105":
+    if URL == "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=8105":
         adresy_kratke.remove('ps34?xjazyk=CZ&xkraj=14&xobec=505927')
     elif URL == "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=8106":
         adresy_kratke.remove("ps34?xjazyk=CZ&xkraj=14&xobec=554821")
@@ -323,7 +312,6 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             SPD.append(tabulka2[127])
             SPO.append(tabulka2[132])
             Narod_sobě.append(tabulka2[137])
-
 
         elif URL in Vysočina:
             Občanská_demokratická_strana.append(tabulka2[12])
@@ -609,7 +597,6 @@ def vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hla
                    'Křesť.demokr.unie-Čs.str.lid.' : KDU_ČSL[číslo], 'REALISTÉ' : Realisté[číslo],'SPORTOVCI' : SPORTOVCI[číslo],
                    'Dělnic.str.sociální spravedl.': DSSS[číslo], 'Svob.a př.dem.-T.Okamura (SPD)' : SPD[číslo], 'Strana Práv Občanů' : SPO[číslo],
                    "Narod_sobě" : Narod_sobě[číslo]}
-
         list_slovniku.append(slovník)
 
 
@@ -668,6 +655,8 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
 
 
 hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
+
+
 
 
 
