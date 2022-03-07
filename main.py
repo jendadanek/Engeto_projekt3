@@ -683,7 +683,7 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                     "Narod_sobě v %" : list_slovniku[index]["Narod_sobě"],
                 })
 
-hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=4&xnumnuts=3203","Plzen")
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
 
 
 
