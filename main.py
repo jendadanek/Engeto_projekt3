@@ -28,6 +28,7 @@ def hlavni(URL,nazev_souboru):
     for číslo in range(1, 5):
         Pardubický.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=9&xnumnuts=530" + str(číslo))
 
+
     Kralovehradecký = []
     for číslo in range(1, 6):
         Kralovehradecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=520" + str(číslo))
@@ -45,7 +46,7 @@ def hlavni(URL,nazev_souboru):
         Karlovarský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=5&xnumnuts=410" + str(číslo))
 
     Plzenský = []
-    for číslo in range(1, 8):
+    for číslo in range(1,8):
         Plzenský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=4&xnumnuts=320" + str(číslo))
 
     Jihočeský = []
@@ -54,7 +55,7 @@ def hlavni(URL,nazev_souboru):
 
     Středočeský = []
     for číslo in range(1, 13):
-        Středočeský.append("https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(číslo))
+        Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(číslo))
 
 
 
@@ -76,7 +77,7 @@ def hlavni(URL,nazev_souboru):
     tabulka = []
     kody = []
     mesta = []
-    ziskej_kody_a_mesta(bunky,tabulka, kody, mesta,URL, Praha)
+    ziskej_kody_a_mesta(bunky,tabulka, kody, mesta)
 
     adresy_kratke = []
     seznam_adres = []
@@ -125,8 +126,7 @@ def hlavni(URL,nazev_souboru):
                         STAN,KSČM,Strana_zelených,ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě)
 
-    print((kody))
-    print(tabulka)
+
 
 
     list_slovniku = []
@@ -139,26 +139,21 @@ def hlavni(URL,nazev_souboru):
     zapis_do_SCV(nazev_souboru,list_slovniku)
 
 
-def ziskej_kody_a_mesta(bunky,tabulka, kody, mesta,URL, Praha):
+def ziskej_kody_a_mesta(bunky,tabulka, kody, mesta):
     for prvek in bunky:
         tabulka.append(prvek.text)
 
     for prvek in tabulka:
         if prvek == "X":
             tabulka.remove(prvek)
+        elif prvek == '-':
+            tabulka.remove(prvek)
 
-    if URL in Praha:
-        for prvek in tabulka:
-            if prvek.isdigit():
-                kody.append(prvek)
-            else:
-                mesta.append(prvek)
-    else:
-        for prvek in tabulka[:-3]:
-            if prvek.isdigit():
-                kody.append(prvek)
-            else:
-                mesta.append(prvek)
+    for prvek in tabulka:
+        if prvek.isdigit():
+            kody.append(prvek)
+        else:
+            mesta.append(prvek)
 
 
 def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,
@@ -677,7 +672,7 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
 
 
 
-hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100","Okres_Praha")
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=5205","Okres_Trutnov")
 
 
 
