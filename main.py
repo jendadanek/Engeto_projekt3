@@ -7,6 +7,7 @@ def hlavni(URL,nazev_souboru):
     for číslo in range(1, 5):
         Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(číslo))
 
+
     Moravskoslezký = []
     for číslo in range(1, 7):
         Moravskoslezký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=810" + str(číslo))
@@ -156,6 +157,7 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě):
     for adresa in naparsovano.find_all("a")[5:-2]:
         adresy_kratke.append(adresa.get("href"))
+
 
     for adresa in adresy_kratke[::2]:
         seznam_adres.append("https://volby.cz/pls/ps2017nss/" + adresa)
@@ -606,6 +608,7 @@ def vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hla
                    'Křesť.demokr.unie-Čs.str.lid.' : KDU_ČSL[číslo], 'REALISTÉ' : Realisté[číslo],'SPORTOVCI' : SPORTOVCI[číslo],
                    'Dělnic.str.sociální spravedl.': DSSS[číslo], 'Svob.a př.dem.-T.Okamura (SPD)' : SPD[číslo], 'Strana Práv Občanů' : SPO[číslo],
                    "Narod_sobě" : Narod_sobě[číslo]}
+
         list_slovniku.append(slovník)
 
 
