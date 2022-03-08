@@ -52,8 +52,11 @@ def hlavni(URL,nazev_souboru):
         Jihočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=3&xnumnuts=310" + str(císlo))
 
     Středočeský = []
-    for císlo in range(1, 13):
+    for císlo in range(1, 10):
         Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(císlo))
+
+    for císlo in range(0,3):
+        Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=211" + str(císlo))
 
     Praha = ["https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100"]
 
@@ -653,8 +656,10 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                     "Narod_sobě v %" : list_slovniku[index]["Narod_sobě"],
                 })
 
-
 hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
+
+
+
 
 
 
