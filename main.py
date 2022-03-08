@@ -78,7 +78,7 @@ def hlavni(URL,nazev_souboru):
     adresy_kratke = []
     seznam_adres = []
 
-    voliči_v_seznamu = []
+    volici_v_seznamu = []
     vydane_obalky = []
     platne_hlasy = []
 
@@ -115,13 +115,13 @@ def hlavni(URL,nazev_souboru):
     Narod_sobě = []
 
     ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,
-                        Plzenský,Jihočeský,Středočeský,Praha, naparsovano, adresy_kratke, seznam_adres, voliči_v_seznamu,vydane_obalky,
+                        Plzenský,Jihočeský,Středočeský,Praha, naparsovano, adresy_kratke, seznam_adres, volici_v_seznamu,vydane_obalky,
                         platne_hlasy,Občanská_demokratická_strana,Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD, Cibulka,Radostné_Česko,
                         STAN,KSČM,Strana_zelených,ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě)
 
     list_slovniku = []
-    vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
+    vytvoř_list_slovniků(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
                          Řád_národa,CESTA_ODPOVĚDNÉ_SPOLEČNOSTI, ČSSD, Cibulka, Radostné_Česko, STAN, KSČM,Strana_zelených,
                          ROZUMNÍ, Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,Národní_fronta,
                          Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,
@@ -148,7 +148,7 @@ def ziskej_kody_a_mesta(bunky,tabulka, kody, mesta):
 
 
 def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,
-                        Plzenský,Jihočeský,Středočeský,Praha, naparsovano, adresy_kratke, seznam_adres, voliči_v_seznamu,vydane_obalky,
+                        Plzenský,Jihočeský,Středočeský,Praha, naparsovano, adresy_kratke, seznam_adres, volici_v_seznamu, vydane_obalky,
                         platne_hlasy,Občanská_demokratická_strana,Řád_národa, CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD, Cibulka,Radostné_Česko,
                         STAN,KSČM,Strana_zelených,ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě):
@@ -178,7 +178,7 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
         bunky2 = naparsovano2.find_all("td")
         for prvek in bunky2:
             tabulka2.append(prvek.text)
-        voliči_v_seznamu.append(tabulka2[3])
+        volici_v_seznamu.append(tabulka2[3])
         vydane_obalky.append(tabulka2[4])
         platne_hlasy.append(tabulka2[7])
         if URL in Zlínský:
@@ -578,13 +578,13 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             Narod_sobě.append("nekandiduje")
 
 
-def vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
+def vytvoř_list_slovniků(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
                          Řád_národa,CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD,Cibulka,Radostné_Česko,STAN,KSČM,Strana_zelených,
                          ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,Národní_fronta,
                          Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,
                          Narod_sobě,list_slovniku):
     for číslo in range(len(kody)):
-        slovník = {"kod" : kody[číslo], "mesto" : mesta[číslo], "volici v seznamu" : voliči_v_seznamu[číslo],
+        slovník = {"kod" : kody[číslo], "město" : mesta[číslo], "volici v seznamu" : volici_v_seznamu[číslo],
                    "vydane obalky" : vydane_obalky[číslo], "platne hlasy" : platne_hlasy[číslo], 'Občanská demokratická strana': Občanská_demokratická_strana[číslo],
                    'Řád národa - Vlastenecká unie' : Řád_národa[číslo], 'CESTA ODPOVĚDNÉ SPOLEČNOSTI' : CESTA_ODPOVĚDNÉ_SPOLEČNOSTI[číslo],
                    "Česká str.sociálně demokrat." : ČSSD[číslo], "Cibulka" : Cibulka[číslo], 'Radostné Česko' : Radostné_Česko[číslo], 'STAROSTOVÉ A NEZÁVISLÍ' : STAN[číslo],
@@ -602,7 +602,7 @@ def vytvoř_list_slovniků(kody,mesta,voliči_v_seznamu,vydane_obalky,platne_hla
 
 def zapis_do_SCV(nazev_souboru,list_slovniku):
     with open(f"{nazev_souboru}.csv", "a", newline="") as csv_soubor:
-        zahlavi = ["KOD", "MESTO", "VOLICI V SEZNAMU", "VYDANE OBALKY","PLATNE HLASY", 'Občanská demokratická strana v %', 'Řád národa - Vlastenecká unie v %',
+        zahlavi = ["KÓD", "MĚSTO", "VOLIČI V SEZNAMU", "VYDANÉ OBALKY","PLATNÉ HLASY", 'Občanská demokratická strana v %', 'Řád národa - Vlastenecká unie v %',
                    'CESTA ODPOVĚDNÉ SPOLEČNOSTI v %', "Česká str.sociálně demokratická v %", "Cibulka v %", 'Radostné Česko v %', 'STAROSTOVÉ A NEZÁVISLÍ v %',
                    'Komunistická str.Čech a Moravy v %','Strana zelených v %', "ROZUMNÍ-stop migraci,diktát.EU v %","Společ.proti výst.v Prok.údolí v %",
                    'Strana svobodných občanů v %','Blok proti islam.-Obran.domova v %','Občanská demokratická aliance v %','Česká pirátská strana v %',
@@ -615,11 +615,11 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
         for index, _ in enumerate(list_slovniku):
             writer.writerow(
                 {
-                    "KOD": list_slovniku[index]["kod"],
-                    "MESTO": list_slovniku[index]["mesto"],
-                    "VOLICI V SEZNAMU" : list_slovniku[index]["volici v seznamu"],
-                    "VYDANE OBALKY" : list_slovniku[index]["vydane obalky"],
-                    "PLATNE HLASY" : list_slovniku[index]["platne hlasy"],
+                    "KÓD": list_slovniku[index]["kod"],
+                    "MĚSTO": list_slovniku[index]["město"],
+                    "VOLIČI V SEZNAMU" : list_slovniku[index]["volici v seznamu"],
+                    "VYDANÉ OBALKY" : list_slovniku[index]["vydane obalky"],
+                    "PLATNÉ HLASY" : list_slovniku[index]["platne hlasy"],
                     'Občanská demokratická strana v %' : list_slovniku[index]["Občanská demokratická strana"],
                     'Řád národa - Vlastenecká unie v %' : list_slovniku[index]["Řád národa - Vlastenecká unie"],
                     'CESTA ODPOVĚDNÉ SPOLEČNOSTI v %' : list_slovniku[index]["CESTA ODPOVĚDNÉ SPOLEČNOSTI"],
@@ -654,7 +654,7 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                 })
 
 
-hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2103","Kladno")
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
 
 
 
