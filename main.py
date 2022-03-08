@@ -448,34 +448,34 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
         elif URL in Plzenský:
             Občanská_demokratická_strana.append(tabulka2[12])
             Řád_národa.append(tabulka2[17])
-            CESTA_ODPOVĚDNÉ_SPOLEČNOSTI.append("nekandiduje")
-            ČSSD.append(tabulka2[22])
+            CESTA_ODPOVĚDNÉ_SPOLEČNOSTI.append(tabulka2[22])
+            ČSSD.append(tabulka2[27])
             Cibulka.append("nekandiduje")
-            Radostné_Česko.append(tabulka2[27])
-            STAN.append(tabulka2[32])
-            KSČM.append(tabulka2[37])
-            Strana_zelených.append(tabulka2[42])
-            ROZUMNÍ.append(tabulka2[47])
+            Radostné_Česko.append(tabulka2[32])
+            STAN.append(tabulka2[37])
+            KSČM.append(tabulka2[42])
+            Strana_zelených.append(tabulka2[47])
+            ROZUMNÍ.append(tabulka2[52])
             Údolí.append("nekandiduje")
-            Strana_svobodných_občanů.append(tabulka2[52])
-            Blok_proti_islamu.append(tabulka2[57])
-            ODA.append(tabulka2[62])
-            Piráti.append(tabulka2[67])
-            OBČANÉ_2011.append(tabulka2[72])
+            Strana_svobodných_občanů.append(tabulka2[57])
+            Blok_proti_islamu.append(tabulka2[62])
+            ODA.append(tabulka2[67])
+            Piráti.append(tabulka2[72])
+            OBČANÉ_2011.append(tabulka2[77])
             HAVEL.append("nekandiduje")
             Národní_fronta.append("nekandiduje")
-            Referendum_o_EU.append(tabulka2[77])
-            TOP09.append(tabulka2[82])
-            ANO.append(tabulka2[87])
+            Referendum_o_EU.append(tabulka2[82])
+            TOP09.append(tabulka2[87])
+            ANO.append(tabulka2[92])
             Dobrá_volba.append("nekandiduje")
-            Republikáni.append(tabulka2[92])
-            KDU_ČSL.append(tabulka2[97])
-            Narodní_socialisté.append(tabulka2[102])
-            Realisté.append(tabulka2[107])
-            SPORTOVCI.append(tabulka2[112])
-            DSSS.append(tabulka2[117])
-            SPD.append(tabulka2[122])
-            SPO.append(tabulka2[127])
+            Republikáni.append(tabulka2[97])
+            KDU_ČSL.append(tabulka2[102])
+            Narodní_socialisté.append(tabulka2[107])
+            Realisté.append(tabulka2[112])
+            SPORTOVCI.append(tabulka2[117])
+            DSSS.append(tabulka2[122])
+            SPD.append(tabulka2[127])
+            SPO.append(tabulka2[132])
             Narod_sobě.append("nekandiduje")
 
         elif URL in Jihočeský:
@@ -607,8 +607,8 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                    'Komunistická str.Čech a Moravy v %','Strana zelených v %', "ROZUMNÍ-stop migraci,diktát.EU v %","Společ.proti výst.v Prok.údolí v %",
                    'Strana svobodných občanů v %','Blok proti islam.-Obran.domova v %','Občanská demokratická aliance v %','Česká pirátská strana v %',
                    "OBČANÉ 2011-SPRAVEDL. PRO LIDI v %","Unie H.A.V.E.L. v %","Česká národní fronta v %", 'Referendum o Evropské unii v %',
-                   'TOP 09 v %', 'ANO 2011 v %', 'Dobrá volba 2016 v %', "Česká strana národně sociální v %", 'SPR-Republ.str.Čsl. M.Sládka v %',
-                   'Křesť.demokr.unie-Čs.str.lid. v %', 'REALISTÉ v %', 'SPORTOVCI v %','Dělnic.str.sociální spravedl. v %','Svob.a př.dem.-T.Okamura (SPD) v %',
+                   'TOP 09 v %', 'ANO 2011 v %', 'Dobrá volba 2016 v %', 'SPR-Republ.str.Čsl. M.Sládka v %', 'Křesť.demokr.unie-Čs.str.lid. v %',
+                   "Česká strana národně sociální v %", 'REALISTÉ v %', 'SPORTOVCI v %','Dělnic.str.sociální spravedl. v %','Svob.a př.dem.-T.Okamura (SPD) v %',
                    'Strana Práv Občanů v %',  "Narod_sobě v %" ]
         writer = csv.DictWriter(csv_soubor, fieldnames=zahlavi)
         writer.writeheader()
@@ -642,9 +642,9 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                     'TOP 09 v %' :  list_slovniku[index]["TOP 09"],
                     'ANO 2011 v %' :  list_slovniku[index]["ANO 2011"],
                     'Dobrá volba 2016 v %' :  list_slovniku[index]["Dobrá volba 2016"],
-                    "Česká strana národně sociální v %" : list_slovniku[index]["Česká strana národně sociální"],
                     'SPR-Republ.str.Čsl. M.Sládka v %' : list_slovniku[index]["SPR-Republ.str.Čsl. M.Sládka"],
                     'Křesť.demokr.unie-Čs.str.lid. v %' :  list_slovniku[index]["Křesť.demokr.unie-Čs.str.lid."],
+                    "Česká strana národně sociální v %": list_slovniku[index]["Česká strana národně sociální"],
                     'REALISTÉ v %' : list_slovniku[index]["REALISTÉ"],
                     'SPORTOVCI v %' : list_slovniku[index]["SPORTOVCI"],
                     'Dělnic.str.sociální spravedl. v %' : list_slovniku[index]["Dělnic.str.sociální spravedl."],
@@ -654,7 +654,7 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
                 })
 
 
-hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
+hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2103","Kladno")
 
 
 
