@@ -4,66 +4,66 @@ import csv
 
 def hlavni(URL,nazev_souboru):
     Zlínský = []
-    for číslo in range(1, 5):
-        Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(číslo))
+    for císlo in range(1, 5):
+        Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo))
 
     Moravskoslezký = []
-    for číslo in range(1, 7):
-        Moravskoslezký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=810" + str(číslo))
+    for císlo in range(1, 7):
+        Moravskoslezký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=14&xnumnuts=810" + str(císlo))
 
     Olomoucký = []
-    for číslo in range(1, 6):
-        Olomoucký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=710" + str(číslo))
+    for císlo in range(1, 6):
+        Olomoucký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=710" + str(císlo))
 
     Jihomoravský = []
-    for číslo in range(1, 8):
-        Jihomoravský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=620" + str(číslo))
+    for císlo in range(1, 8):
+        Jihomoravský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=620" + str(císlo))
 
     Vysočina = []
-    for číslo in range(1, 6):
-        Vysočina.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=10&xnumnuts=610" + str(číslo))
+    for císlo in range(1, 6):
+        Vysočina.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=10&xnumnuts=610" + str(císlo))
 
     Pardubický = []
     for číslo in range(1, 5):
-        Pardubický.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=9&xnumnuts=530" + str(číslo))
+        Pardubický.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=9&xnumnuts=530" + str(císlo))
 
     Kralovehradecký = []
-    for číslo in range(1, 6):
-        Kralovehradecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=520" + str(číslo))
+    for císlo in range(1, 6):
+        Kralovehradecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=520" + str(císlo))
 
     Liberecký = []
-    for číslo in range(1, 5):
-        Liberecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=7&xnumnuts=510" + str(číslo))
+    for císlo in range(1, 5):
+        Liberecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=7&xnumnuts=510" + str(císlo))
 
     Ústecký = []
-    for číslo in range(1, 8):
-        Ústecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=6&xnumnuts=420" + str(číslo))
+    for císlo in range(1, 8):
+        Ústecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=6&xnumnuts=420" + str(císlo))
 
     Karlovarský = []
-    for číslo in range(1, 4):
-        Karlovarský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=5&xnumnuts=410" + str(číslo))
+    for císlo in range(1, 4):
+        Karlovarský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=5&xnumnuts=410" + str(císlo))
 
     Plzenský = []
-    for číslo in range(1,8):
-        Plzenský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=4&xnumnuts=320" + str(číslo))
+    for císlo in range(1,8):
+        Plzenský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=4&xnumnuts=320" + str(císlo))
 
     Jihočeský = []
-    for číslo in range(1, 8):
-        Jihočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=3&xnumnuts=310" + str(číslo))
+    for císlo in range(1, 8):
+        Jihočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=3&xnumnuts=310" + str(císlo))
 
     Středočeský = []
-    for číslo in range(1, 13):
-        Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(číslo))
+    for císlo in range(1, 13):
+        Středočeský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=210" + str(císlo))
 
     Praha = ["https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100"]
 
     kraje = [Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,Plzenský,Jihočeský,Středočeský,Praha]
-    Možné_adresy = []
+    Možne_adresy = []
     for kraj in kraje:
         for l in kraj:
-            Možné_adresy.append(l)
+            Možne_adresy.append(l)
 
-    if URL not in Možné_adresy:
+    if URL not in Možne_adresy:
         print("Neplatná adresa. Ukončuji program")
         exit()
 
