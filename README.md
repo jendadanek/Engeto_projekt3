@@ -19,6 +19,7 @@ for císlo in range(1, 5):
     Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo))
 
 ['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204']
+
 To použiji k vytvoøení seznamu adres všech okresù a k øešení tøetí výzvy.
 Tahle èást kódu slouží k vytvoøení listu okresù.
 
@@ -134,10 +135,6 @@ Funkce vytváøí øádky, které následnì zapisuje do souboru typu SCV.
 
 
 
-
-
-
-
 Jazyk
 Tam kde se mi to zdá pøíhodné (Kraje, strany) jsem ponechal èeské znaky. Jednak jsou to ustálené výrazy a kód bude asi smìøovat hlavnì na èeské uživatele.
 
@@ -150,5 +147,5 @@ hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Z
 
 
 Zobrazení výsledkù
-Doporuèuji si otevøít excel. Nahoøe dát data. Dále tlaèítko Z Text/CSV. Následnì vyberete vygenerovaný soubor a dáte importovat. Vyskoèí vám tabulka, kterou potvrdíte tlaèítkem naèíst.
+Doporuèuji si otevøít excel. Nahoøe dát data. Dále tlaèítko Z Text/CSV. Následnì vyberete vygenerovaný soubor a dáte importovat. Vyskoèí vám tabulka, kterou potvrdíte tlaèítkem naèíst. Tím se nám vytvoøí hezká tabulka a zbavíme se pevných mezer. 
 
