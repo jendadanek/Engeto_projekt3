@@ -24,12 +24,13 @@ def hlavni(URL,nazev_souboru):
         Vysočina.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=10&xnumnuts=610" + str(císlo))
 
     Pardubický = []
-    for číslo in range(1, 5):
+    for císlo in range(1, 5):
         Pardubický.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=9&xnumnuts=530" + str(císlo))
 
     Kralovehradecký = []
     for císlo in range(1, 6):
         Kralovehradecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=520" + str(císlo))
+
 
     Liberecký = []
     for císlo in range(1, 5):
@@ -652,3 +653,5 @@ def zapis_do_SCV(nazev_souboru,slovniky):
                 })
 
 hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
+
+
