@@ -52,11 +52,11 @@ bunky = naparsovano.find_all("td")
 ```
 
 
-## Získej_kódy_a_mesta
+## ziskej_kody_a_mesta
 Tahle èást kódu dá údaje do listu, z kterého se èíselné údaje pøidají do listu kódy. Textové údaje se pøidají do listu mìsta.
 
 
-## Získej_údaje_z_obcí
+## ziskej_udaje_z_obci
 Tato èást kódu je nejsloitìjší, protoe øeší vızvy 2 a 3.
 
 Tahle èást kódu získá „krátké adresy“. Tedy tu èást, která se nachází za https://volby.cz/pls/ps2017nss/.
@@ -131,7 +131,7 @@ Tahle èást kódu naráí na vızvu èíslo 3. Tu jsem vyøešil podmínkovou vìtví, kter
 
 
 
-## vytvor_list_slovníkù
+## vytvor_list_slovniku
 
 For cyklus pøiøadí ke klíèi pøíslušnou hodnotu z listu podle jejího indexu. Vıslednı slovník pøiøadí do listu slovníkù a proces opakuje s druhım indexem.
 
