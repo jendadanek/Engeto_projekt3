@@ -15,9 +15,9 @@ Jak se vypoøádat s faktem, že v každém kraji kandiduje jiná struktura stran.
 V úvodu si vytváøím  adresy jednotlivých okresù a ty pøidávám do listu reprezentující kraj.
 
 ### Ukázka:
-' ' ' Zlínský = []
+`Zlínský = []
 for císlo in range(1, 5):
-    Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo)) ' ' '
+    Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo)` 
 
 _['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204']_
 
@@ -73,7 +73,7 @@ for adresa in naparsovano.find_all("a")[5:-2]:
 ' ' '
 
 ### Ukázka:
-_['ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102', 'ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102' _
+_['ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102', 'ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102'_
 
 
 Tahle èást vychytává adresy, které se týkají mìst s odkazem.
