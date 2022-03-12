@@ -31,7 +31,6 @@ def hlavni(URL,nazev_souboru):
     for císlo in range(1, 6):
         Kralovehradecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=520" + str(císlo))
 
-
     Liberecký = []
     for císlo in range(1, 5):
         Liberecký.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=7&xnumnuts=510" + str(císlo))
