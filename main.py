@@ -124,7 +124,7 @@ def hlavni(URL,nazev_souboru):
                         Národní_fronta,Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,Narod_sobě)
 
     list_slovniku = []
-    vytvoř_list_slovniků(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
+    vytvor_list_slovniku(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
                          Řád_národa,CESTA_ODPOVĚDNÉ_SPOLEČNOSTI, ČSSD, Cibulka, Radostné_Česko, STAN, KSČM,Strana_zelených,
                          ROZUMNÍ, Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,Národní_fronta,
                          Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,
@@ -581,7 +581,7 @@ def ziskej_udaje_z_obci(URL,Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,V
             Narod_sobě.append("nekandiduje")
 
 
-def vytvoř_list_slovniků(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
+def vytvor_list_slovniku(kody,mesta,volici_v_seznamu,vydane_obalky,platne_hlasy,Občanská_demokratická_strana,
                          Řád_národa,CESTA_ODPOVĚDNÉ_SPOLEČNOSTI,ČSSD,Cibulka,Radostné_Česko,STAN,KSČM,Strana_zelených,
                          ROZUMNÍ,Údolí,Strana_svobodných_občanů,Blok_proti_islamu,ODA,Piráti,OBČANÉ_2011,HAVEL,Národní_fronta,
                          Referendum_o_EU,TOP09,ANO,Dobrá_volba,Narodní_socialisté,Republikáni,KDU_ČSL,Realisté,SPORTOVCI,DSSS,SPD,SPO,

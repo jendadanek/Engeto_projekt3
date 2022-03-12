@@ -141,7 +141,7 @@ Tahle èást kódu naráží na výzvu èíslo 3. Tu jsem vyøešil podmínkovou vìtví, kter
 
 
 
-## vytvoø_list_slovníkù
+## vytvor_list_slovníkù
 
 For cyklus pøiøadí ke klíèi pøíslušnou hodnotu z listu podle jejího indexu. Výsledný slovník pøiøadí do listu slovníkù a proces opakuje s druhým indexem.
 
@@ -169,5 +169,8 @@ Na konci je zavolána funkce hlavní. Do jejího prvního indexu vložte string s adr
 
 
 # Zobrazení výsledkù
-Doporuèuji si otevøít excel. Nahoøe dát data. Dále tlaèítko Z Text/CSV. Následnì vyberete vygenerovaný soubor a dáte importovat. Vyskoèí vám tabulka, kterou potvrdíte tlaèítkem naèíst. Tím se nám vytvoøí hezká tabulka a zbavíme se pevných mezer. 
+Doporuèuji si otevøít excel. Nahoøe dát data. Dále tlaèítko Z Text/CSV. Následnì vyberete vygenerovaný soubor a dáte importovat. Vyskoèí vám tabulka, kterou potvrdíte tlaèítkem naèíst. Tím se nám vytvoøí hezká tabulka a zbavíme se pevných mezer.
+
+# Rozdíly mezi main a verzí 2:
+Ve verzi dva nevstupují prázdné listy do funkcí z hlavní funkce, ale jsou vytvoøeny v dané funkci a do hlavní funkce se dostávají jako tuple listù. Ušetøí to písmenka pøi volání funkcí, ale možná to znepøehlední funkci zápisu do SCV.
 
