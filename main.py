@@ -61,12 +61,12 @@ def hlavni(URL,nazev_souboru):
     Praha = ["https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100"]
 
     kraje = [Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysočina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,Plzenský,Jihočeský,Středočeský,Praha]
-    Možne_adresy = []
+    Mozne_adresy = []
     for kraj in kraje:
         for l in kraj:
-            Možne_adresy.append(l)
+            Mozne_adresy.append(l)
 
-    if URL not in Možne_adresy:
+    if URL not in Mozne_adresy:
         print("Neplatná adresa. Ukončuji program")
         exit()
 
