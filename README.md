@@ -15,13 +15,11 @@ Jak se vypoøádat s faktem, že v každém kraji kandiduje jiná struktura stran.
 V úvodu si vytváøím  adresy jednotlivých okresù a ty pøidávám do listu reprezentující kraj.
 
 ### Ukázka:
-' ' '
-Zlínský = []
+' ' ' Zlínský = []
 for císlo in range(1, 5):
-    Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo))
-' ' '
+    Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo)) ' ' '
 
-_['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204']_
+_ ['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204'] _
 
 To použiji k vytvoøení seznamu adres všech okresù a k øešení tøetí výzvy.
 Tahle èást kódu slouží k vytvoøení listu okresù.
