@@ -19,13 +19,13 @@ V úvodu si vytváøím  adresy jednotlivých okresù a ty pøidávám do listu reprezent
 for císlo in range(1, 5):
     Zlínský.append("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=720" + str(císlo)) ' ' '
 
-_ ['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204'] _
+_['https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7201', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7202', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7203', 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204']_
 
 To použiji k vytvoøení seznamu adres všech okresù a k øešení tøetí výzvy.
 Tahle èást kódu slouží k vytvoøení listu okresù.
 
-' ' '
-kraje = [Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysoèina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,Plzenský,Jihoèeský,Støedoèeský,Praha]
+' ' '		
+	kraje = [Zlínský,Moravskoslezký,Olomoucký,Jihomoravský,Vysoèina,Pardubický,Kralovehradecký,Liberecký,Ústecký,Karlovarský,Plzenský,Jihoèeský,Støedoèeský,Praha]
 Možne_adresy = []
 for kraj in kraje:
     for l in kraj:
