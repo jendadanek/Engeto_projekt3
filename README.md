@@ -1,20 +1,20 @@
 # Engeto_projekt3
-#Instalace balíèkù:
+# Instalace balíèkù:
 Na dolní lištì otevøete záložku Python Packages.
 Do vyhledavaèe napište bs4 a na pravém okraji najdete tlaèítko install.
 Stejný proces zopakujte pro instalaci balíèku requests.
 
-#Program:
-##Výzvy:
+# Program:
+## Výzvy:
 Jak vytáhnout údaje z více tabulek.
 Jak vytáhnout údaje z obcí v daném okrese.
 Jak se vypoøádat s faktem, že v každém kraji kandiduje jiná struktura stran.
 
-#Struktura programu:
-##hlavni
+# Struktura programu:
+## hlavni
 V úvodu si vytváøím  adresy jednotlivých okresù a ty pøidávám do listu reprezentující kraj.
 
-###Ukázka:
+### Ukázka:
 ' ' '
 Zlínský = []
 for císlo in range(1, 5):
@@ -57,11 +57,11 @@ bunky = naparsovano.find_all("td")
 ' ' '
 
 
-##Získej_kódy_a_mesta
+## Získej_kódy_a_mesta
 Tahle èást kódu dá údaje do listu, z kterého se èíselné údaje pøidají do listu kódy. Textové údaje se pøidají do listu mìsta.
 
 
-##Získej_údaje_z_obcí
+## Získej_údaje_z_obcí
 Tato èást kódu je nejsložitìjší, protože øeší výzvy 2 a 3.
 
 Tahle èást kódu získá „krátké adresy“. Tedy tu èást, která se nachází za 
@@ -74,7 +74,7 @@ for adresa in naparsovano.find_all("a")[5:-2]:
     adresy_kratke.append(adresa.get("href"))
 ' ' '
 
-###Ukázka:
+### Ukázka:
 _['ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102', 'ps311?xjazyk=CZ&xkraj=12&xobec=552356&xvyber=7102' _
 
 
@@ -142,33 +142,33 @@ if URL in Zlínský:
 ' ' '
 
 
-##vytvoø_list_slovníkù
+## vytvoø_list_slovníkù
 
 For cyklus pøiøadí ke klíèi pøíslušnou hodnotu z listu podle jejího indexu. Výsledný slovník pøiøadí do listu slovníkù a proces opakuje s druhým indexem.
 
-###Ukázka:
+### Ukázka:
 _{'kod': '552356', 'mesto': 'Babice', 'volici v seznamu': '370', 'vydane obalky': '256', 'platne hlasy': '254'_
 
 
-##zapis_do_SCV
+## zapis_do_SCV
 
 Funkce vytváøí øádky, které následnì zapisuje do souboru typu SCV.
 
 
 
-#Jazyk
+# Jazyk
 Tam kde se mi to zdá pøíhodné (Kraje, strany) jsem ponechal èeské znaky. Jednak jsou to ustálené výrazy a kód bude asi smìøovat hlavnì na èeské uživatele.
 
 
-#Spouštìní programu
+# Spouštìní programu
 Na konci je zavolána funkce hlavní. Do jejího prvního indexu vložte string s adresou a do druhého indexu str název souboru ve formì stringu. 
 
-###Ukázka:
+### Ukázka:
 ' ' '
 hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")
 ' ' '
 
 
-#Zobrazení výsledkù
+# Zobrazení výsledkù
 Doporuèuji si otevøít excel. Nahoøe dát data. Dále tlaèítko Z Text/CSV. Následnì vyberete vygenerovaný soubor a dáte importovat. Vyskoèí vám tabulka, kterou potvrdíte tlaèítkem naèíst. Tím se nám vytvoøí hezká tabulka a zbavíme se pevných mezer. 
 
