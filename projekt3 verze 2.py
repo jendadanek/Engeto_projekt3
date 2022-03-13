@@ -652,6 +652,6 @@ def zapis_do_SCV(nazev_souboru,slovniky):
                     "Narod_sobě v %" : slovniky[index]["Narod_sobě"],
                 })
 
-print(argv)
+argv(hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín"))
 
 
