@@ -663,7 +663,7 @@ if __name__ == "__main__":
         URL = sys.argv[1]
         nazev_souboru = sys.argv[2]
         hlavni(URL,nazev_souboru)
-    except TypeError:
+    except IndexError:
         print("Potřebuješ dva argumenty. První argument je URL a druhý je název výsledného souboru.")
 
 
