@@ -660,8 +660,8 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
 
 if __name__ == "__main__":
     try:
-        URL = str(sys.argv[1])
-        nazev_souboru = str(sys.argv[2])
+        URL = sys.argv[1]
+        nazev_souboru = sys.argv[2]
         hlavni(URL,nazev_souboru)
     except TypeError:
         print("Potřebuješ dva argumenty. První argument je URL a druhý je název výsledného souboru.")
