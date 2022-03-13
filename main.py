@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 import csv
-
+import sys
 def hlavni(URL,nazev_souboru):
     Zlínský = []
     for císlo in range(1, 5):
