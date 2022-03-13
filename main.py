@@ -670,4 +670,3 @@ hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Z
 
 
 
-
