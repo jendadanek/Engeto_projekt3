@@ -152,6 +152,8 @@ Tam kde se mi to zdá pøíhodné (Kraje, strany) jsem ponechal èeské znaky. Jednak 
 # Spouštìní programu
 Na konci je zavolána funkce hlavní. Do jejího prvního indexu vložte string s adresou a do druhého indexu str název souboru ve formì stringu. 
 
+
+
 ### Ukázka:
 
 ```hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204","Zlín")```

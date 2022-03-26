@@ -658,12 +658,12 @@ def zapis_do_SCV(nazev_souboru,list_slovniku):
 
 # hlavni("https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=13&xnumnuts=7204", "Zlínský")
 
-if __name__ == "__main__":
-    try:
+ if __name__ == "__main__":
+     try:
         URL = sys.argv[1]
         nazev_souboru = sys.argv[2]
         hlavni(URL,nazev_souboru)
-    except IndexError:
+     except IndexError:
         print("Potřebuješ dva argumenty. První argument je URL a druhý je název výsledného souboru.")
 
 
